@@ -1,0 +1,40 @@
+﻿<Window x:Class="LiveChartsTests.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:LiveChartsTests"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="Container">
+        <lvc:CartesianChart Name="Chart" Series="{Binding SeriesCollection}" >
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Name="Axis">
+                    <lvc:Axis.Sections>
+                        <lvc:AxisSection Value="8" SectionWidth="400000" Label="Bad" Visibility="Visible">
+                            <lvc:AxisSection.Fill>
+                                <SolidColorBrush Color="Red" Opacity=".4"></SolidColorBrush>
+                            </lvc:AxisSection.Fill>
+                        </lvc:AxisSection>
+                        <lvc:AxisSection Value="6" SectionWidth="2" Label="Good">
+                            <lvc:AxisSection.Fill>
+                                <SolidColorBrush Color="Yellow" Opacity=".4"></SolidColorBrush>
+                            </lvc:AxisSection.Fill>
+                        </lvc:AxisSection>
+                        <lvc:AxisSection Value="4" SectionWidth="-2" Label="Good">
+                            <lvc:AxisSection.Fill>
+                                <SolidColorBrush Color="Yellow" Opacity=".4"></SolidColorBrush>
+                            </lvc:AxisSection.Fill>
+                        </lvc:AxisSection>
+                        <lvc:AxisSection Value="2" SectionWidth="-400000" Label="Bad">
+                            <lvc:AxisSection.Fill>
+                                <SolidColorBrush Color="Red" Opacity=".4"></SolidColorBrush>
+                            </lvc:AxisSection.Fill>
+                        </lvc:AxisSection>
+                    </lvc:Axis.Sections>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+    </Grid>
+</Window>
